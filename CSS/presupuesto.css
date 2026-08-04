@@ -116,6 +116,7 @@ input[type="file"]:focus {
   gap: 1rem;               /* Espacio de 16px entre botones (tanto en horizontal como en vertical) */
   flex-wrap: wrap;         /* Permite que pasen abajo si la pantalla del móvil es estrecha */
   margin-top: 1.5rem;
+
 }
 
 button[type="submit"] {
