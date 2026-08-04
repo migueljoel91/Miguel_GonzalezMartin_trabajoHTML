@@ -1,0 +1,155 @@
+.formulario-presupuesto {
+  max-width: 600px;  /* Máximo 600 px de ancho */
+  margin: 2rem auto;  /* 2rem de margen superior e inferior y auto de izquierda a derecha */
+  padding: 1.5rem;  /* Espacio interno entre borde section y el contenido */
+}
+
+fieldset {
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+ 
+legend {
+  font-weight: bold;
+  padding: 0 0.5rem;
+  text-align: center;
+}
+ 
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+ 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box; /* para que el campo no desborde del contenedor */
+  background-color: var(--surface-color);
+  color: var(--text-main);
+}
+
+ 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+ 
+textarea {
+  resize: vertical; /* El usuario solo podrá alargar la caja verticalmente y no rompe el diseño de ancho fijo con el width: 100 % */
+}
+ 
+.checkbox-privacidad {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem 0;
+}
+ 
+.checkbox-privacidad input {
+  margin-top: 0.5rem;
+}
+ 
+button {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+/* Estilo general para la caja del input de tipo archivo */
+input[type="file"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: var(--surface-color); /* Tono oscuro a juego con las tarjetas */
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-main); /* Texto claro para que se lea el nombre del archivo elegido */
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* Estilo específico para el botón "Seleccionar archivo" */
+input[type="file"]::file-selector-button {
+  background-color: var(--accent); /* El rojo corporativo de Vulkania */
+  color: var(--text-main);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto Hover para el botón del archivo */
+input[type="file"]::file-selector-button:hover {
+  background-color: var(--accent-hover); /* Rojo más intenso al pasar el ratón */
+}
+
+/* Efecto Focus al seleccionar el campo */
+input[type="file"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  border-width: 3px;
+}
+
+.botones-formulario {
+  display: flex;
+  justify-content: center; /* Centra los botones en ambas situaciones */
+  align-items: center;
+  gap: 1rem;               /* Espacio de 16px entre botones (tanto en horizontal como en vertical) */
+  flex-wrap: wrap;         /* Permite que pasen abajo si la pantalla del móvil es estrecha */
+  margin-top: 1.5rem;
+}
+
+button[type="submit"] {
+  background-color: var(--accent);
+  color: var(--text-main);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--accent-hover);
+}
+ 
+button[type="reset"] {
+  background-color: var(--surface-color);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+ 
+button[type="reset"]:hover {
+  background-color: var(--border-color);
+}
+
+.required {
+    color: var(--accent);
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+
+.nota-requerido {    /* estilo a campos obligatorios */
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}

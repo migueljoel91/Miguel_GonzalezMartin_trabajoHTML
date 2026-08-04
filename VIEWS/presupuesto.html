@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vulkania Heavy: Fabricación y distribución de equipamiento de entrenamiento profesional y Home Gyms exigentes en Canarias.">
+    <meta name="author" content="Miguel Yoel Gonzalez Martin">
+    <meta name="locality" content="Canarias, España">
+    <meta name="category" content="Equipamiento deportivo">
+    <meta name="keywords" content="Vulkania, entrenamiento, formulario, presupuesto, musculacion">
+    <meta name="robots" content="index, follow">
+    <title>Vulkania Heavy - Presupuesto</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/presupuesto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!--Logos facebook e instagram-->
+    <!--Logo Favicon-->
+    <link rel="icon" type="image/png" href="../ASSETS/Favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="../ASSETS/Favicon/favicon.svg">
+    <link rel="shortcut icon" href="../ASSETS/Favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../ASSETS/Favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="VulkaniaHeavy">
+    <link rel="manifest" href="../ASSETS/Favicon/site.webmanifest">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">Vulkania Heavy</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="presupuesto.html" class="active">Presupuesto</a></li>
+                <li><a href="contacto.html">Contacto<span class="emoji-contacto">📞</span></a></li>
+            </ul>
+            <div class="cart-icon">
+                <span>🛒 Carrito (0)</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="formulario-presupuesto">
+            <h1>Envíanos tus dudas</h1>
+            <p class="nota-requerido"><span class="required">*</span>Campos obligatorios</p>
+            < name="Formulario" action="ConjuntoDeDatos.php" method="post" enctype="multipart/form-data" onsubmit="event.preventDefault();">  <!-- Con esto conseguimos que no de error 404 al hacer clic en enviar formulario -->
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <label for="nombre">Nombre completo<span class="required">*</span></label>
+                    <input type="text" name="nombre" id="nombre" value="" placeholder="Escriba su nombre" required>
+                    <label for="email">Correo electrónico<span class="required">*</span></label>
+                    <input type="email" name="email" id="email" placeholder="Escriba su correo" required>
+                    <label for="telefono">Teléfono<span class="required">*</span></label>
+                    <input type="tel" name="telefono" id="telefono" placeholder="Escriba su número" pattern="[0-9]{9}" title="Por favor, introduce un número de teléfono válido de 9 dígitos (ej. 612345678)" required>
+                </fieldset>
+
+                <label for="informacion">Solicite más información<span class="required">*</span></label>
+                <textarea name="informacion" id="informacion" cols="40" rows="10" required></textarea>
+
+                <label for="foto">Sube tu archivo</label>
+                <input type="file" name="foto" id="foto" accept="image/*,.pdf">
+
+                <div class="checkbox-privacidad">
+                <input type="checkbox" name="politica-de-privacidad" value="si" id="politica-de-privacidad" required>
+                <label for="politica-de-privacidad">He leído y acepto la Política de Privacidad<span class="required">*</span></label>
+                </div>
+
+                <div class="botones-formulario">
+                    <button type="submit">Enviar formulario</button>
+                    <button type="reset">Resetear formulario</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Vulkania Heavy. Todos los derechos reservados. Diseñado para gimnasios comerciales y Home Gyms exigentes.</p>
+            <p>Envíos a toda España (excepto Península y Baleares). Soporte técnico: taller@vulkaniaheavy.com</p>
+            <p class="footer-legal-links">
+                <a href="../aviso-legal.html">Aviso Legal</a> | 
+                <a href="../privacidad.html">Política de Privacidad</a> | 
+                <a href="../cookies.html">Política de Cookies</a>
+            </p>         
+            <p>Síguenos en redes: </p>
+        </div>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i> <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-instagram" aria-hidden="true"></i> <span>Instagram</span>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

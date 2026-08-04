@@ -1,0 +1,534 @@
+/* RESETEO DE ESTILOS POR DEFECTO Y CONFIGURACION DE LAS VARIABLES GLOBALES */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Reseteo del valor por defecto "content-box" */
+}
+
+:root {
+    --bg-color: #121214;       /* Fondo oscuro */
+    --bg-color-rgb: 18, 18, 20;  /* Mismo fondo oscuro en rb para poder aplicar transparencia en main-header */
+    --surface-color: #1e1e24;  /* Fondo de las tarjetas de producto */
+    --text-main: #f5f5f7;      /* Texto claro principal */
+    --text-muted: #a0a0aa;    /* Texto secundario y descripciones */
+    --accent: #cc2b2b;        /* Rojo deportivo y Botones primarios */
+    --accent-hover: #9d1f1f;  /* Rojo al pasar el ratón */
+    --border-color: #2d2d35;  /* Bordes sutiles */
+    --surface-alt: #31313e;   /* Fondo para el apartado ¿por qué elegirnos? y reseñas */
+    --bg-footer: #080809;   /* Fondo para el footer */
+}
+
+html {
+    scroll-behavior: smooth;  /* Movimiento fluido al hacer clic en links */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Roboto, Helvetica, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;  /* Como mínimo, abarca toda la altura de la pantalla del usuario */
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* ESTILOS DE NAVEGACION Y HEADER */
+
+.main-header {
+    background-color: rgba(var(--bg-color-rgb), 0.95);  /* 95 % de opacidad */
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;  /* Fijar encabezado al hacer scroll */
+    top: 0;  /* Fijado en la parte superior de la página */
+    z-index: 1000; /* Me aseguro que el navegador está superpuesto a cualquier otro contenido de la página */
+    backdrop-filter: blur(10px);  /* Desenfoca lo que haya detrás del menú */
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-main);
+}
+
+.logo::after {  /* Estilo virtual para el "." después del nombre de la empresa */
+    content: ".";
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem; /* Espacio solo entre los links del navegador */
+}
+
+.emoji-contacto {  /* Dar más espacio entre el emoji y "Contacto" */
+    margin-left: 8px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;  /* Poner texto en mayúsculas */
+    transition: color 0.2s ease;  /* Crea una transición suave del color al poner el ratón encima */ 
+    line-height: 1.2;
+}
+
+.nav-links a.active {
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {  /* Cuando el ratón se coloca encima, cambia al color asignado en la variable */
+    color: var(--accent);
+}
+
+.cart-icon {
+    font-weight: 600;
+    background-color: var(--surface-color);
+    padding: 0.5rem 1rem;
+    border-radius: 7px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+/* BANNER PRINCIPAL (HERO) */
+
+.hero-banner {
+    background: linear-gradient(rgba(18, 18, 20, 0.8), rgba(18, 18, 20, 0.9)),
+                url('https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=1920') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1.5rem;  /* Ningún margen arriba ni abajo, y 1.5 rem de margen izquierdo y derecho */
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+/* CONTENEDOR DE LA TIENDA Y SECCIONES */
+
+.main-title {    /* Cabecera de la página de productos.html */
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto 3rem auto;  /* auto de izquierda y derecha centra el h1 en la pantalla */
+    padding-bottom: 0.5rem;  /* Añade un espacio para que el texto no quede pegado a la línea debajo */
+    width: fit-content;  /* La caja del título no ocupa todo el ancho de la pantalla (que es lo que hace por defecto un <h1>), sino que se encoja para abarcar únicamente lo que mide el texto  */
+    border-bottom: 4px solid var(--accent);  /* Línea continua a modo de subrayado del título */
+}
+
+.shop-container {
+    max-width: 1200px;  /* Ancho máximo */
+    margin: 4rem auto 0;  /* Margen arriba de 4 rem , auto a los lados y 0 abajo */
+    padding: 0 1.5rem;
+}
+
+.shop-container h2 {
+  margin: 0 auto 3rem auto;
+  color: var(--accent);
+  width: fit-content; /* Ajustamos la caja al tamaño del texto */
+}
+
+.product-section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* GRID Y TARJETAS DE PRODUCTO */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--text-muted);
+}
+
+.product-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+
+.product-card:hover .product-img {
+    filter: grayscale(0%);
+}
+
+.product-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.product-description {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.product-price {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+.product-price small {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: block;
+    font-weight: 400;
+}
+
+.btn-buy {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 2px solid var(--accent);
+    padding: 0.6rem 1.2rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-buy:hover {
+    background-color: var(--accent);
+    color: var(--text-main);
+}
+
+.ver-mas {
+    text-align: center;
+}
+
+/* POR QUÉ ELEGIRNOS */
+
+.why-us-section {
+    margin-top: 5rem;
+    background-color: var(--surface-alt);
+    padding: 2rem 0;
+}
+
+.titulo-centrado {
+    display: table; /* Se comporta como una tabla de una sola celda */
+    margin-left: auto;  /* Centra por el lado izquierdo */
+    margin-right: auto;  /* Centra por el lado derecho */
+}
+
+.section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+ 
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+ 
+.why-us-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+ 
+.why-us-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+ 
+.why-us-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+ 
+.why-us-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+}
+ 
+.why-us-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+ 
+/* RESEÑAS DE CLIENTES */
+
+.reviews-section {
+    background-color: var(--surface-alt);
+    padding: 4rem 0;
+}
+
+   .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+ 
+.review-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1.75rem;
+}
+ 
+.review-stars {
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 2px;
+}
+ 
+.review-text {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+ 
+.review-author {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* PIE DE PÁGINA (FOOTER) */
+
+.main-footer {
+    background-color: var(--bg-footer);
+    border-top: none;
+    position: relative;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    margin-top: auto; /* Empuja el footer hacia el extremo inferior del body */
+}
+
+.main-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, var(--accent), #1a1a1a);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ESTILOS PARA REDES SOCIALES EN EL FOOTER */
+
+.footer-socials {
+    margin-top: 1.5rem; /* Separa las redes del texto anterior */
+    display: flex;
+    justify-content: center;
+    gap: 4rem; /* Espacio entre Facebook e Instagram */
+}
+
+.social-link {
+    color: var(--text-muted); /* Color gris del tema */
+    text-decoration: none;    /* Quita el subrayado feo por defecto */
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; /* Espacio entre el emoji y el texto */
+}
+
+/* Al pasar el ratón por encima, se vuelven rojos y suben un poquito */
+.social-link:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.footer-legal-links a {
+    color: var(--text-muted); /* Un gris más suave que el texto principal */
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.footer-legal-links a:hover {
+    color: var(--text-main);
+}
+
+/*ESTILOS DE LA PAGINA DE COOKIES, AVISO LEGAL Y POLITICA DE PRIVACIDAD*/
+
+.legal-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.6;
+    color: var(--text-main);
+}
+
+.legal-intro {
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.legal-section {
+    margin-bottom: 25px;
+}
+
+.legal-section h2 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.legal-section h3 {
+    margin-top: 15px;
+    color: var(--text-main);
+}
+
+.legal-section ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.legal-section li {
+    margin-bottom: 8px;
+}
+
+.legal-section a[href^="mailto:"] {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.legal-section a[href^="mailto:"]:hover{
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}

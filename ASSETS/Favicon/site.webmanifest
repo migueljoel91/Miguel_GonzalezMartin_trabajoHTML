@@ -1,0 +1,21 @@
+{
+  "name": "MyWebSite",
+  "short_name": "MySite",
+  "icons": [
+    {
+      "src": "/C:\\Users\\migue\\OneDrive\\CUROS DE PROGRAMACION WEB\\2-HTML Y CSS\\TRABAJO FINAL DE TEMA\\Miguel_GonzalezMartin_trabajoHTML\\ASSETS\\Favicon/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/C:\\Users\\migue\\OneDrive\\CUROS DE PROGRAMACION WEB\\2-HTML Y CSS\\TRABAJO FINAL DE TEMA\\Miguel_GonzalezMartin_trabajoHTML\\ASSETS\\Favicon/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#646161",
+  "background_color": "#434040",
+  "display": "standalone"
+}
