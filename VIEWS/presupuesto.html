@@ -42,7 +42,7 @@
         <section class="formulario-presupuesto">
             <h1>Envíanos tus dudas</h1>
             <p class="nota-requerido"><span class="required">*</span>Campos obligatorios</p>
-            <name="Formulario" action="ConjuntoDeDatos.php" method="post" enctype="multipart/form-data" onsubmit="event.preventDefault();">  <!-- Con esto conseguimos que no de error 404 al hacer clic en enviar formulario -->
+            <form name="Formulario" action="ConjuntoDeDatos.php" method="post" enctype="multipart/form-data" onsubmit="event.preventDefault();">  <!-- Con esto conseguimos que no de error 404 al hacer clic en enviar formulario -->
                 <fieldset>
                     <legend>Datos personales</legend>
                     <label for="nombre">Nombre completo<span class="required">*</span></label>
