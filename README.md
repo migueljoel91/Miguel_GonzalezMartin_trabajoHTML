@@ -10,7 +10,7 @@
 
 ## 🔗 Enlaces del Proyecto
 - 🌐 **Sitio Web en Vivo (GitHub Pages):** [https://migueljoel91.github.io/Miguel_GonzalezMartin-trabajoHTML/](https://migueljoel91.github.io/Miguel_GonzalezMartin_trabajoHTML/)
-- 💻 **Repositorio de Código Fuente (GitHub):** [https://github.com/migueljoel91/Miguel_GonzalezMartin-trabajoHTML](https://github.com/migueljoel91/Miguel_GonzalezMartin-trabajoHTML)
+- 💻 **Repositorio de Código Fuente (GitHub):** [https://github.com/migueljoel91/Miguel_GonzalezMartin-trabajoHTML](https://github.com/migueljoel91/Miguel_GonzalezMartin_trabajoHTML)
 
 ---
 
