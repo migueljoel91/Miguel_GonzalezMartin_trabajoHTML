@@ -7,16 +7,16 @@
 }
 
 :root {
-    --bg-color: #121214;       /* Fondo oscuro */
-    --bg-color-rgb: 18, 18, 20;  /* Mismo fondo oscuro en rb para poder aplicar transparencia en main-header */
-    --surface-color: #1e1e24;  /* Fondo de las tarjetas de producto */
-    --text-main: #f5f5f7;      /* Texto claro principal */
-    --text-muted: #a0a0aa;    /* Texto secundario y descripciones */
-    --accent: #cc2b2b;        /* Rojo deportivo y Botones primarios */
-    --accent-hover: #9d1f1f;  /* Rojo al pasar el ratón */
-    --border-color: #2d2d35;  /* Bordes sutiles */
-    --surface-alt: #31313e;   /* Fondo para el apartado ¿por qué elegirnos? y reseñas */
-    --bg-footer: #080809;   /* Fondo para el footer */
+    --bg-color: #121214;         /* Fondo oscuro */
+    --bg-color-rgb: 18, 18, 20;  /* Mismo fondo oscuro en rgb para poder aplicar transparencia en main-header */
+    --surface-color: #1e1e24;    /* Fondo de las tarjetas de producto */
+    --text-main: #f5f5f7;        /* Texto claro principal */
+    --text-muted: #a0a0aa;       /* Texto secundario y descripciones */
+    --accent: #cc2b2b;           /* Rojo deportivo y Botones primarios */
+    --accent-hover: #9d1f1f;     /* Rojo al pasar el ratón */
+    --border-color: #2d2d35;     /* Bordes sutiles */
+    --surface-alt: #31313e;      /* Fondo para el apartado ¿por qué elegirnos? y reseñas */
+    --bg-footer: #080809;        /* Fondo para el footer */
 }
 
 html {
@@ -28,10 +28,10 @@ body {
     color: var(--text-main);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Roboto, Helvetica, sans-serif;
     line-height: 1.6;
-    min-height: 100vh;  /* Como mínimo, abarca toda la altura de la pantalla del usuario */
+    min-height: 100vh;  /* Como mínimo, mide el 100 % de la altura visible de la pantalla */
     display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
+    flex-direction: column;  /* los hijos del body (header, contenido y footer) se organizan uno debajo del otro */
+    overflow-x: hidden;  /* Oculta cualquier contenido que se desborde horizontalmente, evitando la barra lateral no deseada */
 }
 
 /* ESTILOS DE NAVEGACION Y HEADER */
@@ -39,10 +39,10 @@ body {
 .main-header {
     background-color: rgba(var(--bg-color-rgb), 0.95);  /* 95 % de opacidad */
     border-bottom: 1px solid var(--border-color);
-    position: sticky;  /* Fijar encabezado al hacer scroll */
+    position: sticky;  /* Fija el encabezado al hacer scroll */
     top: 0;  /* Fijado en la parte superior de la página */
-    z-index: 1000; /* Me aseguro que el navegador está superpuesto a cualquier otro contenido de la página */
-    backdrop-filter: blur(10px);  /* Desenfoca lo que haya detrás del menú */
+    z-index: 1000; /* Asegura que el navegador quede superpuesto a cualquier otro contenido de la página */
+    backdrop-filter: blur(10px);  /* Crea un efecto de "vidrio esmerilado" de 10px al contenido detrás del header */
 }
 
 .navbar {
