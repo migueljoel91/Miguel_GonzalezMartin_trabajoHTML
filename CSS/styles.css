@@ -40,18 +40,18 @@ body {
     background-color: rgba(var(--bg-color-rgb), 0.95);  /* 95 % de opacidad */
     border-bottom: 1px solid var(--border-color);
     position: sticky;  /* Fija el encabezado al hacer scroll */
-    top: 0;  /* Fijado en la parte superior de la página */
+    top: 0;  /* El encabezado queda fijado en la parte superior de la página */
     z-index: 1000; /* Asegura que el navegador quede superpuesto a cualquier otro contenido de la página */
     backdrop-filter: blur(10px);  /* Crea un efecto de "vidrio esmerilado" de 10px al contenido detrás del header */
 }
 
 .navbar {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.2rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin: 0 auto;  /* Margen vertical "0" y horizontal en auto, para centrar horizontalmente dentro del contenedor */
+    padding: 1.2rem 1.5rem;  /* Añade relleno interno de 1.2rem arriba y abajo y 1.5rem a los lados */
+    display: flex;  /* Convierte la navbar en un flexbox para poder alinear el logo y los enlaces en fila */
+    justify-content: space-between;  /* Distribuye los hijos directos (logo y el resto) dejando el espacio máximo posible entre ellos */
+    align-items: center;  /* Centra verticalmente los hijos dentro de la fiña */
 }
 
 .logo {
@@ -62,28 +62,28 @@ body {
     color: var(--text-main);
 }
 
-.logo::after {  /* Estilo virtual para el "." después del nombre de la empresa */
-    content: ".";
+.logo::after {  
+    content: ".";   /* Estilo virtual para el "." después del nombre de la empresa */
     color: var(--accent);
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem; /* Espacio solo entre los links del navegador */
+    gap: 2rem; /* Crea un espacio de 2rem entre cada elemento de la fila sin añadir espacio extra en los bordes exteriores */
 }
 
-.emoji-contacto {  /* Dar más espacio entre el emoji y "Contacto" */
-    margin-left: 8px;
+.emoji-contacto {  
+    margin-left: 8px;  /* Añade un poco de margen a la izquierda del emoji para separarlo del texto */
 }
 
 .nav-links a {
     color: var(--text-muted);
     text-decoration: none;
     font-size: 0.95rem;
-    font-weight: 600;
-    text-transform: uppercase;  /* Poner texto en mayúsculas */
-    transition: color 0.2s ease;  /* Crea una transición suave del color al poner el ratón encima */ 
+    font-weight: 600;  /* Aplica un grosor semi-negrita */
+    text-transform: uppercase;  /* Pone el texto en mayúsculas */
+    transition: color 0.2s ease;  /* Crea una transición suave (ease) de 0.2s del color al poner el ratón encima */ 
     line-height: 1.2;
 }
 
@@ -93,7 +93,7 @@ body {
     font-size: 0.95rem;
 }
 
-.nav-links a:hover {  /* Cuando el ratón se coloca encima, cambia al color asignado en la variable */
+.nav-links a:hover { 
     color: var(--accent);
 }
 
