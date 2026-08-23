@@ -146,7 +146,7 @@ body {
     border-radius: 4px;
     font-weight: 700;
     text-transform: uppercase;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;  /* Anima cualquier cambio en el fondo durante 0.2s , para que el cambio de color en hover sea suave */
 }
 
 .btn-primary:hover {
@@ -162,8 +162,8 @@ body {
     text-align: center;
     margin: 0 auto 3rem auto;  /* auto de izquierda y derecha centra el h1 en la pantalla */
     padding-bottom: 0.5rem;  /* Añade un espacio para que el texto no quede pegado a la línea debajo */
-    width: fit-content;  /* La caja del título no ocupa todo el ancho de la pantalla (que es lo que hace por defecto un <h1>), sino que se encoja para abarcar únicamente lo que mide el texto  */
-    border-bottom: 4px solid var(--accent);  /* Línea continua a modo de subrayado del título */
+    width: fit-content;  /* La caja del título no ocupa todo el ancho de la pantalla (que es lo que hace por defecto un <h1>), sino que se encoje para abarcar únicamente lo que mide el texto, de manera que el margen "auto" puede centrar el título */
+    border-bottom: 4px solid var(--accent);  /* Añade una línea continua a modo de subrayado del título */
 }
 
 .shop-container {
@@ -175,7 +175,7 @@ body {
 .shop-container h2 {
   margin: 0 auto 3rem auto;
   color: var(--accent);
-  width: fit-content; /* Ajustamos la caja al tamaño del texto */
+  width: fit-content;
 }
 
 .product-section {
@@ -195,29 +195,29 @@ body {
 /* GRID Y TARJETAS DE PRODUCTO */
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    display: grid;  /* Convierte el contenedor en una "rejilla" CSS, permitiendo definir columnas y filas */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));  /* Define las columnas: "repeat(auto-fit, ..)" crea tantas columnas como quepan en el ancho disponible y "minmax(320px, 1fr)" define el ancho mínimo de cada columna (320px) y máximo una fracción igual (1fr) del espacio restante. El resultado es una rejilla responsive que ajusta automáticmente el número de columnas según el ancho de pantalla del usuario */
+    gap: 2rem;  /* Define un espacio de 2rem entre filas y columnas */
 }
 
 .product-card {
     background-color: var(--surface-color);
     border: 1px solid var(--border-color);
     border-radius: 6px;
-    overflow: hidden;
+    overflow: hidden;  /* Oculta cualquier contenido que se salga de los límites de la tarjeta, hace que la imagen interior respete las esquinas redondeadas en vez de sobresalir en forma de rectángulo */
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  /* Coloca la imagen encima y el texto descriptivo debajo */
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .product-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px);  /* Desplaza la tarjeta 4px hacia arriba cuando se pasa el ratón por encima */
     border-color: var(--text-muted);
 }
 
 .product-img {
     width: 100%;
-    height: 240px;
+    height: 340px;
     object-fit: cover;
     filter: grayscale(20%);
     transition: filter 0.3s ease;
