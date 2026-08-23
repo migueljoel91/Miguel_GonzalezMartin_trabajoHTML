@@ -8,7 +8,7 @@
 
 :root {
     --bg-color: #121214;         /* Fondo oscuro */
-    --bg-color-rgb: 18, 18, 20;    /* Mismo fondo oscuro en rgb para poder aplicar transparencia en main-header */
+    --bg-color-rgb: 18, 18, 20;  /* Mismo fondo oscuro en rgb para poder aplicar transparencia en main-header */
     --surface-color: #1e1e24;    /* Fondo de las tarjetas de producto */
     --text-main: #f5f5f7;        /* Texto claro principal */
     --text-muted: #a0a0aa;       /* Texto secundario y descripciones */
@@ -100,27 +100,27 @@ body {
 .cart-icon {
     font-weight: 600;
     background-color: var(--surface-color);
-    padding: 0.5rem 1rem;
-    border-radius: 7px;
+    padding: 0.5rem 1rem;  /* Añade relleno 0.5rem arriba y abajo y 1rem a los lados para darle aspecto de botón */
+    border-radius: 7px;  /* Añade un borde suave */
     border: 1px solid var(--border-color);
-    cursor: pointer;
+    cursor: pointer;  /* Indica interactividad del producto */
 }
 
 /* BANNER PRINCIPAL (HERO) */
 
 .hero-banner {
-    background: linear-gradient(rgba(18, 18, 20, 0.8), rgba(18, 18, 20, 0.9)),
-                url('https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=1920') no-repeat center center/cover;
-    height: 50vh;
+    background: linear-gradient(rgba(18, 18, 20, 0.8), rgba(18, 18, 20, 0.9)),  /* Define dos capas de fondo superpuestas, primero de un negro con 80 % de opacidad a un negro con 90 % de opacidad */
+                url('https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=1920') no-repeat center center/cover;  /* Imagen centrada horizontal y verticalmente y recortada para cubrir todo el contenedor sin deformarse */
+    height: 50vh;  /* Fija la altura del banner en el 50 % de la altura visible de la ventana */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;  /* Centra verticalmente el banner */
+    justify-content: center;  /* Centra horizontalmente el banner */
     text-align: center;
-    padding: 0 1.5rem;  /* Ningún margen arriba ni abajo, y 1.5 rem de margen izquierdo y derecho */
+    padding: 0 1.5rem;  /* Sin margen arriba ni abajo, y 1.5 rem de margen izquierdo y derecho, así el texto no toca los bordes en pantallas extrechas */
 }
 
 .hero-content {
-    max-width: 700px;
+    max-width: 700px;  /* Limita el ancho máximo del bloque de texto a 700 px, evitando que las líneas de texto sean demasiado largas y difíciles de leer */
 }
 
 .hero-content h1 {
@@ -138,7 +138,7 @@ body {
 }
 
 .btn-primary {
-    display: inline-block;
+    display: inline-block;  /* Cambia el tipo de caja del elemento a "en línea pero con dimensiones propias", lo que permite aplicar padding y margin verticales */
     background-color: var(--accent);
     color: var(--text-main);
     text-decoration: none;
