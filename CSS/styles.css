@@ -224,14 +224,14 @@ body {
 }
 
 .product-card:hover .product-img {
-    filter: grayscale(0%);
+    filter: grayscale(0%);  /* Elimina la escala de grises, devolviendo el color original a la foto cuando se pasa el ratón por encima */
 }
 
 .product-info {
     padding: 1.5rem;
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+    flex-direction: column;  /* Apila verticalmente sus elementos hijos */
+    flex-grow: 1;  /* Hace que el contenedor crezca para ocupar todo el espacio vertical restante dentro de la tarjeta, ayudando a que todas las tarjetas del grid tengan la misma altura visual */
 }
 
 .product-title {
@@ -244,15 +244,15 @@ body {
     color: var(--text-muted);
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
-    flex-grow: 1;
+    flex-grow: 1;  /* Empuja el bloque de precio/botón (product-meta) hacia el final de la tarjeta */
 }
 
 .product-meta {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;  /* Separa el precio (a la izquierda) del botón (a la derecha) con el máximo espacio entre ambos */
     align-items: center;
     margin-top: auto;
-    padding-top: 1rem;
+    padding-top: 1rem;  /* Añade relleno superior de 1rem para separar esta fila de la descripción */
     border-top: 1px solid var(--border-color);
 }
 
