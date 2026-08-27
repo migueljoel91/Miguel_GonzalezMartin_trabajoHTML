@@ -265,12 +265,12 @@ body {
 .product-price small {
     font-size: 0.8rem;
     color: var(--text-muted);
-    display: block;
+    display: block;  /* Cambia el "small" (que por defecto es inline) a "block", forzándolo a ocupar su propia línea debajo del precio */
     font-weight: 400;
 }
 
 .btn-buy {
-    background-color: transparent;
+    background-color: transparent;  /* Fondo transparente para ver la tarjeta detrás */
     color: var(--text-main);
     border: 2px solid var(--accent);
     padding: 0.6rem 1.2rem;
@@ -279,7 +279,7 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     font-size: 0.85rem;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;  /* Anima los cambios en el fondo y el color de la letra durante 0.2s cada uno para que el efecto "hover" sea mas suave */
 }
 
 .btn-buy:hover {
