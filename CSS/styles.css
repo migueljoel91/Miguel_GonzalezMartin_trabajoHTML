@@ -279,12 +279,11 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     font-size: 0.85rem;
-    transition: background-color 0.2s ease, color 0.2s ease;  /* Anima los cambios en el fondo y el color de la letra durante 0.2s cada uno para que el efecto "hover" sea mas suave */
+    transition: background-color 0.2s ease;  /* Anima los cambios en el fondo durante 0.2s para que el efecto "hover" sea mas suave */
 }
 
 .btn-buy:hover {
     background-color: var(--accent);
-    color: var(--text-main);
 }
 
 .ver-mas {
