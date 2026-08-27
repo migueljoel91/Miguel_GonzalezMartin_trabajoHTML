@@ -424,24 +424,23 @@ body {
 }
 
 .social-link {
-    color: var(--text-muted); /* Color gris del tema */
-    text-decoration: none;    /* Quita el subrayado feo por defecto */
+    color: var(--text-muted);
+    text-decoration: none;  /* Quita el subrayado por defecto */
     font-size: 1rem;
     font-weight: 600;
     transition: color 0.2s ease, transform 0.2s ease;
-    display: inline-flex;
+    display: inline-flex;  /* Convierte el enlace en un contenedor flex "en línea", permitiendo alinear el emoji y el texto en la misma fila usando "gap", sin que el enlace se comporte como un bloque completo  */
     align-items: center;
-    gap: 0.5rem; /* Espacio entre el emoji y el texto */
+    gap: 0.5rem;  /* Da espacio entre el emoji y el texto */
 }
 
-/* Al pasar el ratón por encima, se vuelven rojos y suben un poquito */
 .social-link:hover {
     color: var(--accent);
-    transform: translateY(-2px);
+    transform: translateY(-2px);  /* Al pasar el ratón por encima, cambian de color y suben 2px */
 }
 
 .footer-legal-links a {
-    color: var(--text-muted); /* Un gris más suave que el texto principal */
+    color: var(--text-muted);
     text-decoration: none;
     margin: 0 5px;
     transition: color 0.3s;
