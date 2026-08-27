@@ -30,7 +30,7 @@ body {
     line-height: 1.6;
     min-height: 100vh;  /* Como mínimo, mide el 100 % de la altura visible de la pantalla */
     display: flex;
-    flex-direction: column;  /* los hijos del body (header, contenido y footer) se organizan uno debajo del otro */
+    flex-direction: column;  /* Los hijos del body (header, contenido y footer) se organizan uno debajo del otro */
     overflow-x: hidden;  /* Oculta cualquier contenido que se desborde horizontalmente, evitando la barra lateral no deseada */
 }
 
@@ -47,11 +47,11 @@ body {
 
 .navbar {
     max-width: 1200px;
-    margin: 0 auto;  /* Margen vertical "0" y horizontal en auto, para centrar horizontalmente dentro del contenedor */
+    margin: 0 auto;  /* Margen vertical "0" y horizontal en "auto" para centrar horizontalmente dentro del contenedor */
     padding: 1.2rem 1.5rem;  /* Añade relleno interno de 1.2rem arriba y abajo y 1.5rem a los lados */
-    display: flex;  /* Convierte la navbar en un flexbox para poder alinear el logo y los enlaces en fila */
+    display: flex;  /* Convierte la "navbar" en un flexbox para poder alinear el logo y los enlaces en fila */
     justify-content: space-between;  /* Distribuye los hijos directos (logo y el resto) dejando el espacio máximo posible entre ellos */
-    align-items: center;  /* Centra verticalmente los hijos dentro de la fiña */
+    align-items: center;  /* Centra verticalmente los hijos dentro de la fila */
 }
 
 .logo {
@@ -63,7 +63,7 @@ body {
 }
 
 .logo::after {  
-    content: ".";   /* Estilo virtual para el "." después del nombre de la empresa */
+    content: ".";  /* Estilo virtual para el "." después del nombre de la empresa */
     color: var(--accent);
 }
 
@@ -83,7 +83,7 @@ body {
     font-size: 0.95rem;
     font-weight: 600;  /* Aplica un grosor semi-negrita */
     text-transform: uppercase;  /* Pone el texto en mayúsculas */
-    transition: color 0.2s ease;  /* Crea una transición suave (ease) de 0.2s del color al poner el ratón encima */ 
+    transition: color 0.2s ease;  /* Crea una transición suave (ease) de 0.2s del color al pasar el ratón por encima */ 
     line-height: 1.2;
 }
 
@@ -109,18 +109,18 @@ body {
 /* BANNER PRINCIPAL (HERO) */
 
 .hero-banner {
-    background: linear-gradient(rgba(18, 18, 20, 0.8), rgba(18, 18, 20, 0.9)),  /* Define dos capas de fondo superpuestas, primero de un negro con 80 % de opacidad a un negro con 90 % de opacidad */
+    background: linear-gradient(rgba(18, 18, 20, 0.8), rgba(18, 18, 20, 0.9)),  /* Define dos capas de fondo superpuestas, primero de un negro con 80% de opacidad a un negro con 90% de opacidad */
                 url('https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=1920') no-repeat center center/cover;  /* Imagen centrada horizontal y verticalmente y recortada para cubrir todo el contenedor sin deformarse */
-    height: 50vh;  /* Fija la altura del banner en el 50 % de la altura visible de la ventana */
+    height: 50vh;  /* Fija la altura del banner en el 50% de la altura visible de la ventana */
     display: flex;
     align-items: center;  /* Centra verticalmente el banner */
     justify-content: center;  /* Centra horizontalmente el banner */
     text-align: center;
-    padding: 0 1.5rem;  /* Sin margen arriba ni abajo, y 1.5 rem de margen izquierdo y derecho, así el texto no toca los bordes en pantallas extrechas */
+    padding: 0 1.5rem;  /* Sin margen arriba ni abajo, y 1.5rem de margen izquierdo y derecho, así el texto no toca los bordes en pantallas extrechas */
 }
 
 .hero-content {
-    max-width: 700px;  /* Limita el ancho máximo del bloque de texto a 700 px, evitando que las líneas de texto sean demasiado largas y difíciles de leer */
+    max-width: 700px;  /* Limita el ancho máximo del bloque de texto a 700px, evitando que las líneas de texto sean demasiado largas y difíciles de leer */
 }
 
 .hero-content h1 {
@@ -138,7 +138,7 @@ body {
 }
 
 .btn-primary {
-    display: inline-block;  /* Cambia el tipo de caja del elemento a "en línea pero con dimensiones propias", lo que permite aplicar padding y margin verticales */
+    display: inline-block;  /* Cambia el tipo de caja del elemento a "en línea" pero con dimensiones propias, lo que permite aplicar padding y margin verticales */
     background-color: var(--accent);
     color: var(--text-main);
     text-decoration: none;
@@ -168,7 +168,7 @@ body {
 
 .shop-container {
     max-width: 1200px;  /* Ancho máximo */
-    margin: 4rem auto 0;  /* Margen arriba de 4 rem , auto a los lados y 0 abajo */
+    margin: 4rem auto 0;  /* Margen arriba de 4rem , auto a los lados y 0 abajo */
     padding: 0 1.5rem;
 }
 
