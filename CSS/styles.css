@@ -299,7 +299,7 @@ body {
 }
 
 .titulo-centrado {
-    display: table; /* Se comporta como una tabla de una sola celda */
+    display: table; /* Se comporta como una tabla de una sola celda y se ajusta al ancho de su contenido */
     margin-left: auto;  /* Centra por el lado izquierdo */
     margin-right: auto;  /* Centra por el lado derecho */
 }
@@ -312,7 +312,7 @@ body {
  
 .why-us-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  /* Repite las columnas automáticamente según quepan, aufo-fit ajusta las columnas al ancho de la pantalla y minmax ajusta el mínimo de cada columna a 220px y si sobra espacio en la pantalla permite que crezcan de forma flexible (1fr) para rellenar todo el hueco */
     gap: 1.5rem;
 }
  
@@ -326,7 +326,7 @@ body {
 }
  
 .why-us-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px);  /* Al pasar el ratón por encima de una tarjeta sube 4px para destacarla */
     border-color: var(--accent);
 }
  
