@@ -1,7 +1,7 @@
 .formulario-presupuesto {
-  max-width: 600px;  /* Máximo 600 px de ancho */
-  margin: 2rem auto;  /* 2rem de margen superior e inferior y auto de izquierda a derecha */
-  padding: 1.5rem;  /* Espacio interno entre borde section y el contenido */
+  max-width: 600px;  /* Limita el ancho máximo a 600px, evitando que se estire demasiado en pantallas anchas */
+  margin: 2rem auto;  /* Define un margen superior e inferior de 2rem y auto a ambos lados para centrar el formulario dentro de su contenedor */
+  padding: 1.5rem;  /* Espacio interno de 1.5rem por todos los lados para separar el contenido del formulario de su propio borde */
 }
 
 fieldset {
