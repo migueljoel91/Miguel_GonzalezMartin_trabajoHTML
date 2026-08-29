@@ -29,8 +29,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Roboto, Helvetica, sans-serif;
     line-height: 1.6;
     min-height: 100vh;  /* Como mínimo, mide el 100 % de la altura visible de la pantalla */
-    display: flex;
-    flex-direction: column;  /* los hijos del body (header, contenido y footer) se organizan uno debajo del otro */
+    display: flex;  /* Convierte el body en un contenedor flexible (flexbox) para controlar cómo se distribuyen sus hijos directos */
+    flex-direction: column;  /* Los hijos del body (header, contenido y footer) se organizan uno debajo del otro */
     overflow-x: hidden;  /* Oculta cualquier contenido que se desborde horizontalmente, evitando la barra lateral no deseada */
 }
 
@@ -47,11 +47,11 @@ body {
 
 .navbar {
     max-width: 1200px;
-    margin: 0 auto;  /* Margen vertical "0" y horizontal en auto, para centrar horizontalmente dentro del contenedor */
+    margin: 0 auto;  /* Margen vertical "0" y horizontal en "auto" para centrar horizontalmente dentro del contenedor */
     padding: 1.2rem 1.5rem;  /* Añade relleno interno de 1.2rem arriba y abajo y 1.5rem a los lados */
-    display: flex;  /* Convierte la navbar en un flexbox para poder alinear el logo y los enlaces en fila */
+    display: flex;  /* Convierte la "navbar" en un flexbox para poder alinear el logo y los enlaces en fila */
     justify-content: space-between;  /* Distribuye los hijos directos (logo y el resto) dejando el espacio máximo posible entre ellos */
-    align-items: center;  /* Centra verticalmente los hijos dentro de la fiña */
+    align-items: center;  /* Centra verticalmente los hijos dentro de la fila */
 }
 
 .logo {
@@ -63,7 +63,7 @@ body {
 }
 
 .logo::after {  
-    content: ".";   /* Estilo virtual para el "." después del nombre de la empresa */
+    content: ".";  /* Estilo virtual para el "." después del nombre de la empresa */
     color: var(--accent);
 }
 
@@ -83,7 +83,7 @@ body {
     font-size: 0.95rem;
     font-weight: 600;  /* Aplica un grosor semi-negrita */
     text-transform: uppercase;  /* Pone el texto en mayúsculas */
-    transition: color 0.2s ease;  /* Crea una transición suave (ease) de 0.2s del color al poner el ratón encima */ 
+    transition: color 0.2s ease;  /* Crea una transición suave (ease) de 0.2s del color al pasar el ratón por encima */ 
     line-height: 1.2;
 }
 
@@ -109,18 +109,18 @@ body {
 /* BANNER PRINCIPAL (HERO) */
 
 .hero-banner {
-    background: linear-gradient(rgba(18, 18, 20, 0.8), rgba(18, 18, 20, 0.9)),  /* Define dos capas de fondo superpuestas, primero de un negro con 80 % de opacidad a un negro con 90 % de opacidad */
+    background: linear-gradient(rgba(18, 18, 20, 0.8), rgba(18, 18, 20, 0.9)),  /* Define dos capas de fondo superpuestas, primero de un negro con 80% de opacidad a un negro con 90% de opacidad */
                 url('https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=1920') no-repeat center center/cover;  /* Imagen centrada horizontal y verticalmente y recortada para cubrir todo el contenedor sin deformarse */
-    height: 50vh;  /* Fija la altura del banner en el 50 % de la altura visible de la ventana */
+    height: 50vh;  /* Fija la altura del banner en el 50% de la altura visible de la ventana */
     display: flex;
     align-items: center;  /* Centra verticalmente el banner */
     justify-content: center;  /* Centra horizontalmente el banner */
     text-align: center;
-    padding: 0 1.5rem;  /* Sin margen arriba ni abajo, y 1.5 rem de margen izquierdo y derecho, así el texto no toca los bordes en pantallas extrechas */
+    padding: 0 1.5rem;  /* Sin margen arriba ni abajo, y 1.5rem de margen izquierdo y derecho, así el texto no toca los bordes en pantallas extrechas */
 }
 
 .hero-content {
-    max-width: 700px;  /* Limita el ancho máximo del bloque de texto a 700 px, evitando que las líneas de texto sean demasiado largas y difíciles de leer */
+    max-width: 700px;  /* Limita el ancho máximo del bloque de texto a 700px, evitando que las líneas de texto sean demasiado largas y difíciles de leer */
 }
 
 .hero-content h1 {
@@ -138,7 +138,7 @@ body {
 }
 
 .btn-primary {
-    display: inline-block;  /* Cambia el tipo de caja del elemento a "en línea pero con dimensiones propias", lo que permite aplicar padding y margin verticales */
+    display: inline-block;  /* Cambia el tipo de caja del elemento a "en línea" pero con dimensiones propias, lo que permite aplicar padding y margin verticales */
     background-color: var(--accent);
     color: var(--text-main);
     text-decoration: none;
@@ -168,7 +168,7 @@ body {
 
 .shop-container {
     max-width: 1200px;  /* Ancho máximo */
-    margin: 4rem auto 0;  /* Margen arriba de 4 rem , auto a los lados y 0 abajo */
+    margin: 4rem auto 0;  /* Margen arriba de 4rem , auto a los lados y 0 abajo */
     padding: 0 1.5rem;
 }
 
@@ -218,20 +218,20 @@ body {
 .product-img {
     width: 100%;
     height: 300px;
-    object-fit: cover;
-    filter: grayscale(20%);
+    object-fit: cover;  /* Recorta la imagen para llenar completamente los 300px sin deformarse */
+    filter: grayscale(20%);  /* Aplica un filtro de escala de grises al 20%, dando a la imagen un aspecto desaturado por defecto */
     transition: filter 0.3s ease;
 }
 
 .product-card:hover .product-img {
-    filter: grayscale(0%);
+    filter: grayscale(0%);  /* Elimina la escala de grises, devolviendo el color original a la foto cuando se pasa el ratón por encima */
 }
 
 .product-info {
     padding: 1.5rem;
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+    flex-direction: column;  /* Apila verticalmente sus elementos hijos */
+    flex-grow: 1;  /* Hace que el contenedor crezca para ocupar todo el espacio vertical restante dentro de la tarjeta, ayudando a que todas las tarjetas del grid tengan la misma altura visual */
 }
 
 .product-title {
@@ -244,15 +244,15 @@ body {
     color: var(--text-muted);
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
-    flex-grow: 1;
+    flex-grow: 1;  /* Empuja el bloque de precio/botón (product-meta) hacia el final de la tarjeta */
 }
 
 .product-meta {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;  /* Separa el precio (a la izquierda) del botón (a la derecha) con el máximo espacio entre ambos */
     align-items: center;
     margin-top: auto;
-    padding-top: 1rem;
+    padding-top: 1rem;  /* Añade relleno superior de 1rem para separar esta fila de la descripción */
     border-top: 1px solid var(--border-color);
 }
 
@@ -265,12 +265,12 @@ body {
 .product-price small {
     font-size: 0.8rem;
     color: var(--text-muted);
-    display: block;
+    display: block;  /* Cambia el "small" (que por defecto es inline) a "block", forzándolo a ocupar su propia línea debajo del precio */
     font-weight: 400;
 }
 
 .btn-buy {
-    background-color: transparent;
+    background-color: transparent;  /* Fondo transparente para ver la tarjeta detrás */
     color: var(--text-main);
     border: 2px solid var(--accent);
     padding: 0.6rem 1.2rem;
@@ -279,12 +279,11 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     font-size: 0.85rem;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease;  /* Anima los cambios en el fondo durante 0.2s para que el efecto "hover" sea mas suave */
 }
 
 .btn-buy:hover {
     background-color: var(--accent);
-    color: var(--text-main);
 }
 
 .ver-mas {
@@ -300,7 +299,7 @@ body {
 }
 
 .titulo-centrado {
-    display: table; /* Se comporta como una tabla de una sola celda */
+    display: table; /* Se comporta como una tabla de una sola celda y se ajusta al ancho de su contenido */
     margin-left: auto;  /* Centra por el lado izquierdo */
     margin-right: auto;  /* Centra por el lado derecho */
 }
@@ -313,7 +312,7 @@ body {
  
 .why-us-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  /* Repite las columnas automáticamente según quepan, aufo-fit ajusta las columnas al ancho de la pantalla y minmax ajusta el mínimo de cada columna a 220px y si sobra espacio en la pantalla permite que crezcan de forma flexible (1fr) para rellenar todo el hueco */
     gap: 1.5rem;
 }
  
@@ -327,7 +326,7 @@ body {
 }
  
 .why-us-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px);  /* Al pasar el ratón por encima de una tarjeta sube 4px para destacarla */
     border-color: var(--accent);
 }
  
@@ -394,6 +393,7 @@ body {
 /* PIE DE PÁGINA (FOOTER) */
 
 .main-footer {
+<<<<<<< HEAD
     background-image: linear-gradient(to right, var(--accent), #1a1a1a);
     background-color: var(--bg-footer);
     background-size: 100% 8px; /* Ancho total, y solo 8px de alto */
@@ -402,6 +402,16 @@ body {
     padding: 3rem 1.5rem;
     text-align: center;
     margin-top: auto;
+=======
+    background-image: linear-gradient(to right, var(--accent), #1a1a1a);  /* Crea una línea degradada moderna para separar el footer del body */
+    background-color: var(--bg-footer);
+    background-size: 100% 8px;  /* Hace que el ancho total del degradado ocupe el 100% y solo 8px de alto */
+    background-position: top;  /* Pega el degradado arriba del footer */
+    background-repeat: no-repeat;  /* Hace que el degradado no se repita hacia abajo */
+    padding: 3rem 1.5rem;
+    text-align: center;
+    margin-top: auto;  /* Como el body es un "flexbox" este margen empuja el footer hasta el final de la pantalla si el contenido de la página es más corto que la ventana */
+>>>>>>> eb22e1ec0090bd5099e4ea75f22869d51473118e
 }
 
 .footer-content {
@@ -425,24 +435,23 @@ body {
 }
 
 .social-link {
-    color: var(--text-muted); /* Color gris del tema */
-    text-decoration: none;    /* Quita el subrayado feo por defecto */
+    color: var(--text-muted);
+    text-decoration: none;  /* Quita el subrayado por defecto */
     font-size: 1rem;
     font-weight: 600;
     transition: color 0.2s ease, transform 0.2s ease;
-    display: inline-flex;
+    display: inline-flex;  /* Convierte el enlace en un contenedor flex "en línea", permitiendo alinear el emoji y el texto en la misma fila usando "gap", sin que el enlace se comporte como un bloque completo  */
     align-items: center;
-    gap: 0.5rem; /* Espacio entre el emoji y el texto */
+    gap: 0.5rem;  /* Da espacio entre el emoji y el texto */
 }
 
-/* Al pasar el ratón por encima, se vuelven rojos y suben un poquito */
 .social-link:hover {
     color: var(--accent);
-    transform: translateY(-2px);
+    transform: translateY(-2px);  /* Al pasar el ratón por encima, cambian de color y suben 2px */
 }
 
 .footer-legal-links a {
-    color: var(--text-muted); /* Un gris más suave que el texto principal */
+    color: var(--text-muted);
     text-decoration: none;
     margin: 0 5px;
     transition: color 0.3s;
