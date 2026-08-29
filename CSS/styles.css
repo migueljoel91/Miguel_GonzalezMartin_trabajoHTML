@@ -393,16 +393,6 @@ body {
 /* PIE DE PÁGINA (FOOTER) */
 
 .main-footer {
-<<<<<<< HEAD
-    background-image: linear-gradient(to right, var(--accent), #1a1a1a);
-    background-color: var(--bg-footer);
-    background-size: 100% 8px; /* Ancho total, y solo 8px de alto */
-    background-position: top;  /* Pegado arriba del todo */
-    background-repeat: no-repeat; /* Que no se repita hacia abajo como un azulejo */
-    padding: 3rem 1.5rem;
-    text-align: center;
-    margin-top: auto;
-=======
     background-image: linear-gradient(to right, var(--accent), #1a1a1a);  /* Crea una línea degradada moderna para separar el footer del body */
     background-color: var(--bg-footer);
     background-size: 100% 8px;  /* Hace que el ancho total del degradado ocupe el 100% y solo 8px de alto */
@@ -411,7 +401,6 @@ body {
     padding: 3rem 1.5rem;
     text-align: center;
     margin-top: auto;  /* Como el body es un "flexbox" este margen empuja el footer hasta el final de la pantalla si el contenido de la página es más corto que la ventana */
->>>>>>> eb22e1ec0090bd5099e4ea75f22869d51473118e
 }
 
 .footer-content {
