@@ -144,7 +144,7 @@ button[type="reset"]:hover {
   background-color: var(--border-color);
 }
 
-/* ESTILO PARA LOS CAMPOS OBLIGATORIOS */
+/* ESTILO PARA EL "*" DE LOS CAMPOS OBLIGATORIOS */
 
 .required {
     color: var(--accent);
