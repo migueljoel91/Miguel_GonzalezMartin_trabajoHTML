@@ -2,35 +2,37 @@
     padding: 4rem 2rem;
 }
 
-/* El bloque que junta el mapa y la info */
+/* ESTILO PARA EL BLOQUE QUE CONTIENE EL MAPA Y LA INFO */
+
 .contacto-contenedor {
-    max-width: 1100px;
-    margin: 0 auto;   /* Caja centrada */
+    max-width: 1100px;  /* Limita el máximo del contenedor a 1100px para que no se estire demasiado en pantallas anchas */
+    margin: 0 auto;  /* Centra el contenedor */
     display: flex;
-    gap: 2rem; /* Espacio de separación entre el mapa y los datos */
-    align-items: flex-start;
+    gap: 2rem;  /* Da un pequeño espacio de separación entre el mapa y los datos */
+    align-items: flex-start;  /* ALinea el mapa y la información por su borde superior en vez de estirarlos o centrarlos, así ambos empiezan a la misma altura */
 }
 
-/* Caja del mapa */
+/* ESTILO PARA EL MAPA */
+
 .contacto-mapa {
-    flex: 1; /* Ocupa el 50% del espacio disponible */
+    flex: 1;  /* Ocupa el 50% del espacio disponible */
 }
 
 .img-mapa {
     width: 100%;
-    height: auto;
-    border-radius: 12px; /* Bordes redondeados */
+    height: auto;  /* Deja que la altura se ajuste automáticamente en proporción al ancho para evitar que se deforme la iamgen */
+    border-radius: 12px; /* Redondea los bordes del mapa */
 }
 
-/* Caja de la información */
+/* ESTILO PARA LA INFORMACION DE CONTACTO */
+
 .contacto-info {
     flex: 1; /* Ocupa el otro 50% del espacio disponible */
 }
 
 .contacto-info h2 {
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    margin: 0 0 0.2rem 0;
+    margin: 0 0 0.2rem 0;  /* Elimina margen arriba, derecha e izquierda y deja un margen de 0.2rem abajo */
 }
 
 .subtitulo {
@@ -39,7 +41,8 @@
     line-height: 1.6;
 }
 
-/* Cada fila de datos (Dirección, Teléfono, etc.) */
+/* Estilo para cada fila de datos (Dirección, Teléfono, etc.) */
+
 .dato-item {
     display: flex;
     align-items: flex-start;
@@ -47,11 +50,13 @@
     margin-bottom: 1rem;  /* Margen por debajo */
 }
 
-.contacto-info .emoji {    /* Diseño de la caja del emoji */
-    font-size: 1.7rem; /* Hace el emoji un poco más grande */
-    display: inline-flex;
-    justify-content: center;  /* Centra el emoji en el centro */
-    width: 30px;  /* Mismo ancho a todos los emojis */
+/* Estilo para la caja del emoji */
+
+.contacto-info .emoji {
+    font-size: 1.7rem;  /* Hace el emoji un poco más grande */
+    display: inline-flex;  /* Convierte el elemento en un contenedor flex "en línea", permitiendo centrar el emoji dentro de su propia caja sin que se comporte como un bloque completo */
+    justify-content: center;  /* Centra horitzontalmente el emoji */
+    width: 30px;  /* Fija un mismo ancho a todos los emojis */
     flex-shrink: 0;  /* Evita que se aplaste en pantallas pequeñas */
 }
 
@@ -62,10 +67,11 @@
     transition: color 0.2s ease;
 }
 
-/* Efecto hover por si hacen clic en el correo o teléfono */
+/* Estilo al pasar el ratón por encima del correo o teléfono */
+
 .texto a:hover {
     color: var(--accent-hover);
-    text-decoration: underline;
+    text-decoration: underline;  /* Añade un sobrayado */ 
 }
 
 /* Visualización en dispositivos móviles */
@@ -73,8 +79,5 @@
 @media (max-width: 768px) {
     .contacto-contenedor {   
         flex-direction: column;
-    }
-    .img-mapa {
-        width: 100%;
     }
 }
