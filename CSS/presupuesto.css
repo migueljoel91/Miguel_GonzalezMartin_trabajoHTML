@@ -70,50 +70,54 @@ button {
   margin-right: 0.5rem;  /* Añade margen derecho para separar los botones de "enviar y resetear formulario" entre sí */
 }
 
-/* Estilo general para la caja del input de tipo archivo */
+/* ESTILO GENERAL PARA LA CAJA DEL INPUT DE SELECCIONAR ARCHIVO */
+
 input[type="file"] {
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  background-color: var(--surface-color); /* Tono oscuro a juego con las tarjetas */
+  background-color: var(--surface-color);
   border: 2px solid var(--border-color);
   border-radius: 4px;
-  color: var(--text-main); /* Texto claro para que se lea el nombre del archivo elegido */
+  color: var(--text-main); 
   box-sizing: border-box;
   cursor: pointer;
 }
 
-/* Estilo específico para el botón "Seleccionar archivo" */
+/* ESTILO ESPECIFICO PARA EL BOTON "SELECCIONAR ARCHIVO" */
+
 input[type="file"]::file-selector-button {
-  background-color: var(--accent); /* El rojo corporativo de Vulkania */
+  background-color: var(--accent);
   color: var(--text-main);
-  border: none;
+  border: none;  /* Elimina el borde predeterminado del botón nativo */
   padding: 0.5rem 1rem;
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
   margin-right: 1rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;  /* Crea una transición en el color de fondo del botón cuando se pasa el ratón por encima */
 }
 
 /* Efecto Hover para el botón del archivo */
+
 input[type="file"]::file-selector-button:hover {
-  background-color: var(--accent-hover); /* Rojo más intenso al pasar el ratón */
+  background-color: var(--accent-hover);
 }
 
 /* Efecto Focus al seleccionar el campo */
+
 input[type="file"]:focus {
   outline: none;
   border-color: var(--accent);
-  border-width: 3px;
+  border-width: 2px;
 }
 
 .botones-formulario {
   display: flex;
-  justify-content: center; /* Centra los botones en ambas situaciones */
-  align-items: center;
-  gap: 1rem;               /* Espacio de 16px entre botones (tanto en horizontal como en vertical) */
-  flex-wrap: wrap;         /* Permite que pasen abajo si la pantalla del móvil es estrecha */
+  justify-content: center;  /* Agrupa los botones justo en el centro del contenedor, dejando el espacio sobrante repartido a los lados derecho e izquierdo (centra horizontalmente) */
+  align-items: center;  /* Centra verticalmente los botones */
+  gap: 1rem;  /* Espacio de 16px entre botones (tanto en horizontal como en vertical) */
+  flex-wrap: wrap;  /* Permite que un botón se coloque debajo del otro si la pantalla es estrecha */
   margin-top: 1.5rem;
 }
 
