@@ -144,13 +144,17 @@ button[type="reset"]:hover {
   background-color: var(--border-color);
 }
 
+/* ESTILO PARA LOS CAMPOS OBLIGATORIOS */
+
 .required {
     color: var(--accent);
     margin-left: 0.3rem;
     margin-right: 0.3rem;
 }
 
-.nota-requerido {    /* estilo a campos obligatorios */
+/* Estilo para el texto: "Campos obligatorios" */
+
+.nota-requerido {
   font-size: 0.85rem;
   color: var(--text-muted);
   margin-bottom: 0.5rem;
