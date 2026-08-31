@@ -18,7 +18,7 @@ legend {
 }
  
 label {
-  display: block;
+  display: block;  /* Obliga a "label" a ocupar su propia línea completa, por lo que el campo de entrada queda debajo en vez de al lado */
   margin-bottom: 0.3rem;
   font-weight: 500;
 }
@@ -27,48 +27,47 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-  width: 100%;
+  width: 100%;  /* Hace que cada campo ocupe el 100% del ancho de su contenedor */
   padding: 0.6rem;
   margin-bottom: 1rem;
   border: 2px solid var(--border-color);
   border-radius: 4px;
   font-size: 1rem;
-  box-sizing: border-box; /* para que el campo no desborde del contenedor */
+  box-sizing: border-box;  /* Hace que el "padding" y el "border" se incluyan dentro del "width= 100%" por lo que el campo no desborda del contenedor */
   background-color: var(--surface-color);
   color: var(--text-main);
 }
 
- 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 textarea:focus {
-  outline: none;
+  outline: none;  /* Elimina el contorno azul que los navegadores dibujan por defecto alrededor de un campo con "focus" */
   border-color: var(--accent);
 }
  
 textarea {
-  resize: vertical; /* El usuario solo podrá alargar la caja verticalmente y no rompe el diseño de ancho fijo con el width: 100 % */
+  resize: vertical; /* El usuario solo podrá alargar la caja verticalmente y no rompe el diseño de ancho fijo definido anteriormente */
 }
  
 .checkbox-privacidad {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
+  display: flex;  /* Convierte el contenedor en un "flexbox", para alinear el checkbox y su texto en la misma fila */
+  align-items: flex-start;  /* Alinea el checkbox y el texto por su borde superior, en vez de centrarlos verticalmente */
+  gap: 0.5rem;  /* Crea un pequeño espacio entre el checkbox y el texto */
   margin: 1rem 0 1.5rem 0;
 }
  
 .checkbox-privacidad input {
-  margin-top: 0.5rem;
+  margin-top: 0.5rem;  /* Añade un pequeño margen superior para ajustarlo verticalmente al texto */
 }
  
 button {
   padding: 0.7rem 1.5rem;
-  border: none;
+  border: none;  /* Elimina el borde por defecto que integran los navegadores */
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  margin-right: 0.5rem;
+  margin-right: 0.5rem;  /* Añade margen derecho para separar los botones de "enviar y resetear formulario" entre sí */
 }
 
 /* Estilo general para la caja del input de tipo archivo */
