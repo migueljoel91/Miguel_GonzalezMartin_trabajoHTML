@@ -78,6 +78,6 @@
 
 @media (max-width: 768px) {
     .contacto-contenedor {   
-        flex-direction: column;
+        flex-direction: column;  /* En pantallas de 768px o menor, el mapa y la información se apilan uno debajo del otro */
     }
 }
