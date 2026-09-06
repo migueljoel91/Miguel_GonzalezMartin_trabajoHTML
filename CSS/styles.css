@@ -400,7 +400,7 @@ body {
     background-repeat: no-repeat;  /* Hace que el degradado no se repita hacia abajo */
     padding: 3rem 1.5rem;
     text-align: center;
-    margin-top: auto;  /* Como el body es un "flexbox" este margen empuja el footer hasta el final de la pantalla si el contenido de la página es más corto que la ventana */
+    margin-top: auto;  /* Como el body es un "flexbox", este margen empuja el footer hasta el final de la pantalla si el contenido de la página es más corto que la ventana */
 }
 
 .footer-content {
@@ -419,8 +419,8 @@ body {
 .footer-socials {
     margin-top: 1.5rem; /* Separa las redes del texto anterior */
     display: flex;
-    justify-content: center;
-    gap: 4rem; /* Espacio entre Facebook e Instagram */
+    justify-content: center;  /* Centra horizontalmente el contenido dentro de la fila */
+    gap: 4rem; /* Crea espacio entre Facebook e Instagram */
 }
 
 .social-link {
@@ -430,13 +430,13 @@ body {
     font-weight: 600;
     transition: color 0.2s ease, transform 0.2s ease;
     display: inline-flex;  /* Convierte el enlace en un contenedor flex "en línea", permitiendo alinear el emoji y el texto en la misma fila usando "gap", sin que el enlace se comporte como un bloque completo  */
-    align-items: center;
+    align-items: center;  /* Centra verticalmente el emoji y el texto entre sí */
     gap: 0.5rem;  /* Da espacio entre el emoji y el texto */
 }
 
 .social-link:hover {
     color: var(--accent);
-    transform: translateY(-2px);  /* Al pasar el ratón por encima, cambian de color y suben 2px */
+    transform: translateY(-2px);  /* Al pasar el ratón por encima, cambian de color y se elevan sutilmente 2px */
 }
 
 .footer-legal-links a {
@@ -455,8 +455,8 @@ body {
 .legal-container {
     max-width: 800px;
     margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.6;
+    padding: 0 20px;  /* Añade relleno horizontal de 20px, sin relleno vertical */
+    line-height: 1.6;  /* Fija una altura de línea de 1.6 para facilitar la lectura de textos largos */
     color: var(--text-main);
 }
 
@@ -489,7 +489,7 @@ body {
     margin-bottom: 8px;
 }
 
-.legal-section a[href^="mailto:"] {
+.legal-section a[href^="mailto:"] {    /* Estilo para los enlaces (<a>) dentro de la clase ".legal-section" cuyo atributo "href" empiece (^=) por el texto "mailto:". Es un selector de atributo para evitar usar una clase adicional en el HTML */
     color: var(--text-muted);
     text-decoration: none;
     transition: color 0.2s ease;
@@ -504,7 +504,7 @@ body {
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        flex-direction: column;  /* Dentro de esta condición, la "navbar" cambia la dirección de fila a columna (logo arriba y links debajo) */
         gap: 1rem;
         align-items: center;
         padding: 1rem 0.75rem;  /* Evita físicamente que el texto choque contra los bordes de la pantalla o de la propia barra */
@@ -512,23 +512,23 @@ body {
     }
     
     .nav-links {
-        flex-wrap: wrap;  /* Si los enlaces no caben en los 375 px del iPhone 13 mini, bajarán de línea limpiamente en lugar de desbordarse o apretarse */
+        flex-wrap: wrap;  /* Si los enlaces no caben en pantallas pequeñas (como los iPhone 13 mini con un tamaño de 375px), bajarán de línea limpiamente en lugar de desbordarse o apretarse */
         justify-content: center;
-        gap: 0.5rem 0.75rem;    /* Espaciado horizontal y vertical controlado */
+        gap: 0.5rem 0.75rem;  /* Espaciado horizontal y vertical controlado */
         width: 100%;
     }
 
     .nav-links a {
-        font-size: 0.9rem;      /* Ajuste fino para pantallas estrechas */
-        white-space: nowrap;    /* Evita que una palabra individual se parta en dos */
+        font-size: 0.9rem;  /* Ajuste fino para pantallas estrechas */
+        white-space: nowrap;  /* Evita que una palabra individual se parta en dos */
     }
 
     .hero-content h1 {
-        font-size: 1.75rem;  /* Un poco más ajuste para evitar colisiones con el header */
+        font-size: 1.75rem;  /* Ajusta un poco más para evitar colisiones con el header */
         margin-top: 1rem;  /* Separa el título principal de la navbar cuando se vuelve vertical */
     }
     
     .product-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;  /* Fuerza a que la rejilla de productos tenga una sola columna (1fr) en móvil, en vez de dejar que "auto-fit" decida cuántas columnas caben */
     }
 }
