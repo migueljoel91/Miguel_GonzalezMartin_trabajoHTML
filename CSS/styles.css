@@ -505,8 +505,7 @@ body {
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;  /* Dentro de esta condición, la "navbar" cambia la dirección de fila a columna (logo arriba y links debajo) */
-        gap: 1rem;
-        align-items: center;
+        align-items: center;  /* Centra todo en el medio de la pantalla */
         padding: 1rem 0.75rem;  /* Evita físicamente que el texto choque contra los bordes de la pantalla o de la propia barra */
         gap: 0.75rem;
     }
@@ -514,8 +513,8 @@ body {
     .nav-links {
         flex-wrap: wrap;  /* Si los enlaces no caben en pantallas pequeñas (como los iPhone 13 mini con un tamaño de 375px), bajarán de línea limpiamente en lugar de desbordarse o apretarse */
         justify-content: center;
-        gap: 0.5rem 0.75rem;  /* Espaciado horizontal y vertical controlado */
-        width: 100%;
+        gap: 0.5rem 0.75rem;  /* Espaciado horizontal y vertical controlado entre los links de navegación */
+        width: 100%;  /* Hace que los enlaces ocupen todo el ancho disponible de la pantalla */
     }
 
     .nav-links a {
@@ -525,10 +524,10 @@ body {
 
     .hero-content h1 {
         font-size: 1.75rem;  /* Ajusta un poco más para evitar colisiones con el header */
-        margin-top: 1rem;  /* Separa el título principal de la navbar cuando se vuelve vertical */
+        margin-top: 1rem;  /* Separa el título principal de la "navbar" cuando se vuelve vertical */
     }
     
     .product-grid {
-        grid-template-columns: 1fr;  /* Fuerza a que la rejilla de productos tenga una sola columna (1fr) en móvil, en vez de dejar que "auto-fit" decida cuántas columnas caben */
+        grid-template-columns: 1fr;  /* Fuerza a que la rejilla de productos tenga una sola columna (1fr) en móviles, en vez de dejar que "auto-fit" decida cuántas columnas caben */
     }
 }
