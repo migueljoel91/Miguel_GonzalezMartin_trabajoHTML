@@ -27,6 +27,9 @@
    - `/VIEWS/productos.html`: Catálogo completo de productos estructurado en secciones (Racks y estaciones, Mancuernas y peso libre, Bancos de entrenamiento).
    - `/VIEWS/presupuesto.html`: Formulario de solicitud de presupuesto con validaciones en HTML5 (patrones regex para teléfono, campos obligatorios) y adjunción de archivos.
    - `/VIEWS/contacto.html`: Información de contacto, canales directos y mapa de ubicación interactivo enlazado a Google Maps.
+   - `/VIEWS/aviso-legal.html`: Información de aviso legal y condiciones de uso de la web.
+   - `/VIEWS/cookies.html`: Política de cookies y gestión de preferencias.
+   - `/VIEWS/privacidad.html`: Política de privacidad y tratamiento de datos personales.
 
 3. **Hojas de Estilo (`/CSS/`):**
    - `/CSS/styles.css`: Estilos globales, paleta de colores, cabecera y pie de página.
